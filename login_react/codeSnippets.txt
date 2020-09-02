@@ -1,0 +1,19 @@
+root Reducer:
+            import {combineReducers} from 'redux';
+            import user from './user';
+
+            export default combineReducers({
+                user // add other reducers here.
+            });
+
+
+reducer:
+    export default function user(state = {}, action = {}){
+    switch (action.type){
+       case '':
+           ... state, // this copies the state before updating the state.
+           return action.value;
+        default:
+            return state;
+    }
+}

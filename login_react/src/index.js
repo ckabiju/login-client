@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {BrowserRouter} from 'react-router-dom';
+import { Provider } from 'react-redux'; // this is to connect react and redux.
+import App from './container/App';
 import * as serviceWorker from './serviceWorker';
+import store from './store/reduxStore';
+import "semantic-ui-css/semantic.min.css";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+  <Provider store={store}>
+    <App/>
+  </Provider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
