@@ -6,6 +6,12 @@ import App from './container/App';
 import * as serviceWorker from './serviceWorker';
 import store from './store/reduxStore';
 import "semantic-ui-css/semantic.min.css";
+import {userLoggedIn} from './actions/auth';
+
+if(localStorage.bookwormJWT){
+  const user = {token: localStorage.bookwormJWT};
+  store.dispatch(userLoggedIn(user));
+}
 
 ReactDOM.render(
   <BrowserRouter>
