@@ -9,7 +9,7 @@ class LoginPage extends React.Component{
     // here we are calling the login function in auth.js. 
     //should avoid using curly braces else it might throw undefined Catch exception
     //Abhi 
-    submit = data => this.props.login(data).then(()=> this.props.history.push("/"));
+    submit = data => this.props.login(data).then(()=> this.props.history.push("/dashboard"));
         
     
     render(){
