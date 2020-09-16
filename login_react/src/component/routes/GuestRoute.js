@@ -11,7 +11,6 @@ const GuestRoute = ({isAuthenticated, component: Component, ...rest}) => (
 GuestRoute.propTypes = {
     component: PropTypes.func.isRequired,
     isAuthenticated: PropTypes.bool.isRequired
-
 };
 
 function mapStateToProps(state){
