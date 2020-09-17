@@ -43,6 +43,7 @@ api.user.login(Credentials).then(user =>
     export const logout = () => dispatch =>{
         localStorage.removeItem('bookwormJWT');
         dispatch(userLoggedOut());
+        
     }; 
 
 
